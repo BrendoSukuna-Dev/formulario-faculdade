@@ -123,3 +123,8 @@ textarea  {
 .botao, selet {
     cursor: pointer;
 }
+
+.desenvolvido, .github {
+    margin-left: -55%;
+    margin-top: 3%;
+}
