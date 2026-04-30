@@ -4,149 +4,168 @@
     box-sizing: border-box;
 }
 
-.main {
-    position: relative;
-    width: 100%;
-    text-align: center;
+body {
+    /* Fundo baseado na imagem do Sukuna fornecida */
+    background-image: url('https://4kwallpapers.com/images/wallpapers/sukuna-black-3440x1440-16937.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    min-height: 100vh;
 }
 
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Imagem flutuante (painel) referenciada no CSS original */
 .painel {
-    position: absolute;
-    top: 7%;
-    left: 20%;
-    transform: translateX(59%);
-    z-index: -1;
-    width: 25%;
-    border-radius: 10px;
-    opacity: 1;
+    display: none;
+    /* Oculto por padrão para não sobrepor o conteúdo no mobile, pode ser ajustado */
 }
 
 #titulo {
-    font-family: sans-serif;
     color: #380B61;
-    margin-left: 0.5%;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #subtitulo {
-    font-family: sans-serif;
-    color: #380B61;
-    margin-left: 10%;
-}
-
-#check {
-    display: inline-block;
-}
-
-fieldset {
-    border: 0;
-}
-
-
-body {
-    background-image: url(https://4kwallpapers.com/images/wallpapers/sukuna-black-3440x1440-16937.png);
-    background-position: 1;
-    background-position-x: 9%;
-    background-position-y: 13%;
-    font-family: sans-serif;
-    font-size: 1em;
     color: #59429d;
-    margin-left: 36%;
-    margin-top: 5%;
-    justify-content: center;
-    z-index: 1;
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
-input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #59429d;
-    border-radius: 5px;
+.campo {
+    margin-bottom: 1.5em;
 }
 
-.grupo:before, .grupo:after {
-    display: table;
-}
-.grupo:after {
-    clear: both;
+.campo label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
 }
 
 .linha {
     display: flex;
-    gap: 0.3em;
-    margin-bottom: 1em;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.campo {
-    margin-bottom: 1em
+.linha .campo {
+    flex: 1;
+    min-width: 200px;
 }
 
-.campo label {
-    margin-bottom: 0.2em;
-    color: #59429d;
-    display: block;
-}
-
-fieldset.grupo .campo {
-    float: center;
-    margin-right: 1em;
-}
-
-.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
-    padding: 0.2em;
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #59429d;
-    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
-    display: block;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease;
 }
 
-.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
-    padding: 0.2em;
-    border: 1px solid #59429d;
-    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
-    display: block;
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    background-color: #E0E0F8;
+    border-color: #380B61;
+    box-shadow: 0 0 5px rgba(56, 11, 97, 0.3);
 }
 
-.campo select option {
-    padding-right: 1em;
+/* Estilo para Radio e Checkbox */
+.checkbox-group,
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    background: #f4f1ff;
+    padding: 15px;
+    border-radius: 8px;
 }
 
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background: #E0E0F8;
-}
-
-textarea  {
-    resize: none;
-}
-
-.botao {
-    font-size: 1.2em;
-    background: #59429d;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 90%;
-    left: 47.05%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    width: 21%;
-    margin-top: -0.9%;
-    border-radius: 999px;
-}
-
-.botao:hover {
-    background: #ccbbff;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-.botao, selet {
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal !important;
     cursor: pointer;
 }
 
-.desenvolvido, .github {
-    margin-left: -55%;
-    margin-top: -1%;
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.botao {
+    width: 100%;
+    padding: 15px;
+    background-color: #380B61;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.botao:hover {
+    background-color: #59429d;
+    transform: translateY(-2px);
+}
+
+.botao:active {
+    transform: translateY(0);
+}
+
+.footer {
+    text-align: center;
+    color: white;
+    padding-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.github-link img {
+    margin-top: 10px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    transition: transform 0.3s;
+}
+
+.github-link img:hover {
+    transform: scale(1.1);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #380B61;
 }

@@ -8,115 +8,102 @@
 </head>
 <body>
 
-<main class="container">
-    <img class="painel" src="/assets/painel.jpg " alt="painel-luz">
+    <main class="container">
+        <!-- Título e Subtítulo -->
+        <header>
+            <h1 id="titulo">FORMULÁRIO DE ALUNOS</h1>
+            <p id="subtitulo">Complete as suas informações</p>
+        </header>
 
-    <div>
-        <h1 id="titulo">FORMULÁRIO DE ALUNOS</h1>
-        <p id="subtitulo">Complete suas informoções</p>
-        <br>
-    </div>
-
-    <form action="https://formspree.io/f/maqvwdde" method="POST">
-        <fieldset class="grupo">
+        <form action="https://formspree.io/f/maqvwdde" method="POST">
+            <!-- Seção de Identificação -->
             <div class="linha">
                 <div class="campo">
-                    <label for="nome"><strong>Nome</strong></label>
-                    <input type="text" name="nome" id="nome" required>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
                 </div>
 
                 <div class="campo">
-                    <label class="sobrenome" for="sobrenome"><strong>Sobrenome</strong></label>
-                    <input type="text"  name="sobrenome" id="sobrenome" required>
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Seu sobrenome" required>
                 </div>
             </div>
 
             <div class="linha">
                 <div class="campo">
-                    <label for="idade"><strong>Idade</strong></label>
-                    <input type="text"  name="idade" id="idade" required>
+                    <label for="idade">Idade</label>
+                    <input type="text" name="idade" id="idade" placeholder="Ex: 20" required>
                 </div>
 
                 <div class="campo">
-                    <label class="email" for="email"><strong>Email</strong></label>
-                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="seu@email.com" required>
                 </div>
             </div>
 
+            <!-- Seção Acadêmica -->
             <div class="campo">
-                <label for="curso"><strong>Qual seu curso?</strong></label>
-                <input type="text" name="curso" id="curso" required>
+                <label for="curso">Qual o seu curso?</label>
+                <input type="text" name="curso" id="curso" placeholder="Nome do curso" required>
             </div>
 
-            <div class="campo">
-                <label><strong>Qual seu foco de atuação?</strong></label>
-                <label>
-                    <input type="radio" name="devweb" value="frontend" required>Front-end
-                </label>
-                <label>
-                    <input type="radio" name="devweb" value="backend">Back-end
-                </label>
-                <label>
-                    <input type="radio" name="devweb" value="fullstack">Fullstack
-                </label>
-                <label>
-                    <input type="radio" name="devweb" value="outras">Outras
-                    <input type="text" name="devweb" id="outras">
-                </label>
-            </div>
-
-            <div class="campo">
-                <label for="senioridade"><strong>Qual seu nível de senioridade?</strong></label>
-                <select id="senioridade" required>
-                    <option selected disabled value="">Selecione</option>
-                    <option>Sem experiência</option>
-                    <option>Estagiário(a)</option>
-                    <option>Junior</option>
-                    <option>Pleno</option>
-                    <option>Senior</option>
-                </select>
-            </div>
-
-            <fieldset class="grupo">
-                <div id="check" required>
-                    <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-                    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
-                    <label for="tecnologia1">HTML</label>
-                    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="CSS">
-                    <label for="tecnologia1">CSS</label>
-                    <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Javascript">
-                    <label for="tecnologia1">JavaScript</label>
-                    <input type="checkbox" id="tecnologia4" name="tecnologia4" value="PHP">
-                    <label for="tecnologia1">PHP</label>
-                    <input type="checkbox" id="tecnologia5" name="tecnologia5" value="C#">
-                    <label for="tecnologia1">C#</label>
-                    <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Python">
-                    <label for="tecnologia1">Python</label>
-                    <input type="checkbox" id="tecnologia7" name="tecnologia7" value="Java">
-                    <label for="tecnologia1">Java</label>
+            <!-- Foco de Atuação -->
+            <fieldset>
+                <legend>Qual o seu foco de atuação?</legend>
+                <div class="radio-group">
+                    <label class="option-item"><input type="radio" name="foco" value="frontend" required> Front-end</label>
+                    <label class="option-item"><input type="radio" name="foco" value="backend"> Back-end</label>
+                    <label class="option-item"><input type="radio" name="foco" value="fullstack"> Fullstack</label>
+                    <label class="option-item">
+                        <input type="radio" name="foco" value="outras"> Outras: 
+                        <input type="text" name="foco_outros" style="width: 80px; padding: 2px; margin-left: 5px;">
+                    </label>
                 </div>
             </fieldset>
 
+            <!-- Senioridade -->
             <div class="campo">
-                <br>
-                <label for="experiencia"><strong>Conte um pouco da sua experiência:</strong></label>
-                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia" required></textarea>
+                <label for="senioridade">Qual o seu nível de senioridade?</label>
+                <select id="senioridade" name="senioridade" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="sem_experiencia">Sem experiência</option>
+                    <option value="estagiario">Estagiário(a)</option>
+                    <option value="junior">Junior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="senior">Senior</option>
+                </select>
             </div>
 
-            <button class="botao" type="submit" onsubmit="">Concluido</button>
-</main>
-            <br>
-            <br>
-            <br>
-            <p class="desenvolvido"><strong>Desenvolvido por:</strong> BrendoSukuna-Dev</p>
-            <br>
-            <code class="github">
-                <a href="https://github.com/BrendoSukuna-Dev" target="_blank">
-                <img width="40px" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="Github" title="GUITHUB"/>
-            </code>
-            
-        </fieldset>
-    </form>
+            <!-- Tecnologias -->
+            <fieldset>
+                <legend>Selecione as tecnologias que utiliza:</legend>
+                <div class="checkbox-group">
+                    <label class="option-item"><input type="checkbox" name="tech[]" value="HTML"> HTML</label>
+                    <label class="option-item"><input type="checkbox" name="tech[]" value="CSS"> CSS</label>
+                    <label class="option-item"><input type="checkbox" name="tech[]" value="JS"> JavaScript</label>
+                    <label class="option-item"><input type="checkbox" name="tech[]" value="PHP"> PHP</label>
+                    <label class="option-item"><input type="checkbox" name="tech[]" value="C#"> C#</label>
+                    <label class="option-item"><input type="checkbox" name="tech[]" value="Python"> Python</label>
+                    <label class="option-item"><input type="checkbox" name="tech[]" value="Java"> Java</label>
+                </div>
+            </fieldset>
+
+            <!-- Experiência -->
+            <div class="campo">
+                <label for="experiencia">Conte um pouco da sua experiência:</label>
+                <textarea id="experiencia" name="experiencia" placeholder="Descreva os seus projetos ou trajetória..." required></textarea>
+            </div>
+
+            <button class="botao" type="submit">Concluído</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p class="desenvolvido">Desenvolvido por: <strong>BrendoSukuna-Dev</strong></p>
+        <a href="https://github.com/BrendoSukuna-Dev" target="_blank" class="github-link">
+            <img width="40px" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="Github" title="GITHUB"/>
+        </a>
+    </footer>
 
 </body>
 </html>
