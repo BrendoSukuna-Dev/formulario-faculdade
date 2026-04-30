@@ -1,4 +1,4 @@
-<h1>📝 Formulário de Cadastro de Alunos (Projeto Academy)</h1>
+<h1>📝 Formulário de Alunos (Projeto Academy)</h1>
 <img width="1875" height="958" alt="Image" src="https://github.com/user-attachments/assets/79651b01-e97d-415a-864d-eddf3845565d" />
 <h2>🖥 Projeto Concluido ✅ </h2> 
 
