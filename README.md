@@ -1,5 +1,5 @@
 <h1>📝 Formulário de Alunos (Projeto Academy)</h1>
-<img width="1875" height="958" alt="Image" src="https://github.com/user-attachments/assets/79651b01-e97d-415a-864d-eddf3845565d" />
+<img width="1875" height="958" alt="Image" src="https://github.com/user-attachments/assets/ffc58337-1dac-4233-af01-4169db470082" />
 <h2>🖥 Projeto Concluido ✅ </h2> 
 
 ## 📋 Sobre o projeto
