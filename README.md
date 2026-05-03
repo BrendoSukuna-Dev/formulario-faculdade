@@ -1,6 +1,9 @@
 <h1>📝 Formulário de Alunos (Projeto Academy)</h1>
 <img width="1860" height="1266" alt="Image" src="https://github.com/user-attachments/assets/7aac981f-d166-4698-9f24-69b7b3a357a3" />
-<h2>🖥 Projeto Concluido ✅ </h2> 
+<h2>🖥 Projeto Concluido ✅ </h2>
+
+## 🔗 Link do projeto
+➥ https://brendosukuna-dev.github.io/formulario-faculdade/
 
 ## 📋 Sobre o projeto
 <p>Este projeto consiste em um formulário web completo e estilizado, desenvolvido para capturar informações de estudantes de tecnologia. Ele foi construído com foco em semântica HTML5,
